@@ -1,5 +1,7 @@
 const express = require('express')
 
+const db = require('./models')
+
 const authController = require('./controllers/auth')
 
 const app = express()
@@ -10,6 +12,8 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authController)
 
-app.listen(3001, () => {
-  console.log('Server running on port 3001...')
+db.sequelize.sync().then(() => {
+  app.listen(3001, () => {
+    console.log('Server running on port 3001...')
+  })
 })
