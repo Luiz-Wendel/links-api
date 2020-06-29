@@ -1,0 +1,16 @@
+{
+  "response.json_ok": "Successful request!",
+  "response.json_bad_request": "Bad request!",
+  "response.json_unauthorized": "Unauthorized!",
+  "response.json_not_found": "Not found!",
+  "response.json_server_error": "Server error!",
+
+  "account.signup.email_exists": "Email already taken!",
+  "account.signup.success": "Account created!",
+  "account.signup.email.string.empty": "Email is required!",
+  "account.signup.email.string.email": "Email must be a valid email!",
+  "account.signup.password.string.empty": "Password is required!",
+  "account.signup.password.string.pattern.base": "Password must be between 6 and 30 characters and have letters and numbers only",
+  "account.signup.password_confirmation.any.required": "Password confirmation is required!",
+  "account.signup.password_confirmation.any.only": "Password confirmation must match"
+}
