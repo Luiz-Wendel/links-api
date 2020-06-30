@@ -24,7 +24,7 @@ router.post('/sign-in', accountSignIn, async (req, res) => {
 
   // Create JWT tokens
   const jwtToken = generateJwt({ id: account.id })
-  const jwtRefreshToken = generateRefreshJwt({ id: account.id })
+  const jwtRefreshToken = generateRefreshJwt({ id: account.id, version: account.jwtVersion })
 
   res.jsonOK(null, getMessage('account.signin.success'), { jwtToken, jwtRefreshToken })
 })
@@ -47,7 +47,7 @@ router.post ('/sign-up', accountSignUp, async (req, res) => {
 
   // Create JWT tokens
   const jwtToken = generateJwt({ id: newAccount.id })
-  const jwtRefreshToken = generateRefreshJwt({ id: newAccount.id })
+  const jwtRefreshToken = generateRefreshJwt({ id: newAccount.id, version: newAccount.jwtVersion })
 
   res.jsonOK(newAccount, getMessage('account.signup.success'), { jwtToken, jwtRefreshToken })
 })

@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     isSocial: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      default: 0
+      defaultValue: 0
     }
   })
 
