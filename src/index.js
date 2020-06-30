@@ -4,6 +4,8 @@ const response = require('./middlewares/response')
 const db = require('./models')
 
 const authController = require('./controllers/auth')
+const linkController = require('./controllers/link')
+const { link } = require('@hapi/joi')
 
 const app = express()
 
@@ -18,6 +20,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/auth', authController)
+
+app.use('/link', linkController)
 
 db.sequelize.sync().then(() => {
   app.listen(3001, () => {
