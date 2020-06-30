@@ -5,6 +5,13 @@
   "response.json_not_found": "Not found!",
   "response.json_server_error": "Server error!",
 
+  "account.signin.invalid": "Invalid credentials! Check your email and/or password!",
+  "account.signin.success": "Login successful!",
+  "account.signin.email.string.empty": "Email is required!",
+  "account.signin.email.string.email": "Email must be a valid email!",
+  "account.signin.password.string.empty": "Password is required!",
+  "account.signin.password.string.pattern.base": "Password must be between 6 and 30 characters and have letters and numbers only",
+
   "account.signup.email_exists": "Email already taken!",
   "account.signup.success": "Account created!",
   "account.signup.email.string.empty": "Email is required!",
