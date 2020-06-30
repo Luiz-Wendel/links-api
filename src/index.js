@@ -1,5 +1,6 @@
 const express = require('express')
 const response = require('./middlewares/response')
+const checkJwt = require('./middlewares/jwt')
 
 const db = require('./models')
 
@@ -11,11 +12,14 @@ const app = express()
 
 // Middlewares
 app.use(response)
+app.use(checkJwt)
 
+// Accept json
 app.use(express.json())
+// Accept req.params
 app.use(express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.json('API running')
 })
 
