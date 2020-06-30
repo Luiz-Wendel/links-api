@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const response = require('./middlewares/response')
 const checkJwt = require('./middlewares/jwt')
 
@@ -11,6 +12,7 @@ const { link } = require('@hapi/joi')
 const app = express()
 
 // Middlewares
+app.use(cors())
 app.use(response)
 app.use(checkJwt)
 
