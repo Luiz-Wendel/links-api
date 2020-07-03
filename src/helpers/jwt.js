@@ -6,7 +6,7 @@ const privateKeyToken = process.env.JWT_PRIVATE_KEY_TOKEN
 const refreshPrivateKeyToken = process.env.JWT_REFRESH_PRIVATE_KEY_TOKEN
 
 const options = { expiresIn: '30 minutes' }
-const refreshOptions = { expiresIn: '3 days' }
+const refreshOptions = { expiresIn: '30 days' }
 
 const generateJwt = (payload) => {
   return jwt.sign(payload, privateKeyToken, options)
